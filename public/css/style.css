@@ -1,1 +1,149 @@
-Adding later.
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#070b0b;
+    color:white;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#1b6b4d;
+    opacity:.08;
+    filter:blur(160px);
+    top:20%;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.navbar{
+    height:72px;
+    display:flex;
+    align-items:center;
+    padding:0 35px;
+    background:#090e0e;
+    border-bottom:1px solid #182220;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:700;
+    color:#62dca8;
+    letter-spacing:-1px;
+}
+
+.tab{
+    margin-left:35px;
+    padding:12px 28px;
+    background:#101817;
+    border:1px solid #263a34;
+    border-radius:12px;
+    color:#8ea09a;
+    transition:.25s;
+}
+
+.tab:hover{
+    border-color:#39b982;
+    color:white;
+}
+
+.main{
+    height:calc(100vh - 72px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.title{
+    font-size:68px;
+    font-weight:800;
+    letter-spacing:-4px;
+    margin-bottom:38px;
+}
+
+.search{
+    width:680px;
+    height:78px;
+    display:flex;
+    align-items:center;
+    padding:0 30px;
+    background:#111717;
+    border:1px solid #39b982;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    transition:.25s;
+}
+
+.search:hover{
+    border-color:#62dca8;
+}
+
+.search:focus-within{
+    box-shadow:0 0 0 3px rgba(57,185,130,.15);
+}
+
+.search input{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:18px;
+}
+
+.search input::placeholder{
+    color:#78817e;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.button{
+    min-width:130px;
+    padding:16px 25px;
+    background:#101616;
+    border:1px solid #202b29;
+    border-radius:15px;
+    color:#aeb8b5;
+    text-align:center;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+    background:#141d1b;
+    border-color:#39b982;
+    color:white;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+.button:active{
+    transform:scale(.97);
+}
+
+.footer{
+    position:absolute;
+    bottom:35px;
+    color:#66716d;
+    font-size:14px;
+}
+
+.footer:hover{
+    color:#9aa5a1;
+}
