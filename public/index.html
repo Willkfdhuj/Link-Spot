@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Link Spot</title>
+  </head>
+  <body>
+  <header>  
+    <h1>Link Spot</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="https://discord.gg/KgkHpnvmR" target="_blank">Discord</a>
+        <a href="apps.html">Apps</a>
+        <a href="settings.html">Settings</a>
+      <a href="credits.html">Credits</a>
+    </nav>
+    <nav>
+      <span id="clock"></span>
+    </nav>
+    <h2>Welcome to Link Spot</h2>
+    <form id="search-form">
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Search DuckDuckGo"
+        autocomplete="off"
+</form>
+      <script>
+function updateTime(){
+    const now = new Date();
+    document.getElementById("clock").textContent =
+        now.toLocaleTimeString();
+}
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+      <script>
+document.getElementById("search-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    let value = document.getElementById("search-input").value.trim();
+    if(!value) return;
+    if(value.includes(".") && !value.includes(" ")){
+        if(!value.startsWith("http://") && !value.startsWith("https://")){
+            value = "https://" + value;
+        }
+        window.location.href = value;
+    } else {
+        window.location.href =
+            "https://www.google.com/search?q=" +
+            encodeURIComponent(value);
+    }
+});
+</script>
+    </body>
+</html>
