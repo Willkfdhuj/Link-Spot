@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+
+body{
+background:#071010;
+color:#fff;
+min-height:100vh;
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+h1{
+text-align:center;
+margin-top:20px;
+font-size:72px;
+font-weight:900;
+letter-spacing:-4px;
+color:#8cf0a6;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:14px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+padding:12px 24px;
+background:#101818;
+border:1px solid #23453b;
+border-radius:14px;
+color:#fff;
+text-decoration:none;
+transition:.2s;
+}
+
+nav a:hover{
+border-color:#8cf0a6;
+transform:translateY(-2px);
+}
+
+#clock{
+position:fixed;
+top:18px;
+right:25px;
+padding:14px 28px;
+background:#101818;
+border:1px solid #23453b;
+border-radius:14px;
+font-size:24px;
+font-weight:700;
+}
+
+input{
+display:block;
+margin:35px auto;
+width:min(650px,90%);
+height:60px;
+padding:0 25px;
+background:#101818;
+border:1px solid #23453b;
+border-radius:18px;
+color:#fff;
+font-size:16px;
+outline:none;
+}
+
+input:focus{border-color:#8cf0a6;}
+
+input::placeholder{color:#7d8884;}
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fill,180px);
+gap:18px;
+justify-content:center;
+padding:20px;
+max-width:1900px;
+margin:0 auto 40px;
+}
+
+.game-card{
+width:180px;
+background:#101818;
+border:1px solid #1f3029;
+border-radius:12px;
+overflow:hidden;
+transition:.2s;
+cursor:pointer;
+}
+
+.game-card:hover{
+transform:translateY(-3px);
+border-color:#8cf0a6;
+}
+
+.game-card img{
+width:180px;
+height:180px;
+object-fit:cover;
+display:block;
+background:#0d1414;
+}
+
+.game-card h3{
+padding:10px;
+font-size:14px;
+font-weight:700;
+text-align:center;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.game-card p,
+.play-btn{display:none;}
+
+::-webkit-scrollbar{width:10px;}
+
+::-webkit-scrollbar-track{background:#081010;}
+
+::-webkit-scrollbar-thumb{
+background:#1d332b;
+border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{background:#2d4d41;}
+
+@media(max-width:768px){
+h1{font-size:42px;}
+
+.games{
+grid-template-columns:repeat(auto-fill,140px);
+gap:12px;
+}
+.game-card,
+.game-card img{
+width:140px;
+height:140px;
+}
